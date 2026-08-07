@@ -5,6 +5,8 @@ export const useTwitchChat = (token: any, login: any, functions: any) => {
   useEffect(() => {
     if (!token || !login) return;
 
+    console.log(functions);
+
     const ws = new WebSocket("wss://irc-ws.chat.twitch.tv:443");
 
     ws.onopen = () => {

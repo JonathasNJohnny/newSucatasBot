@@ -7,6 +7,7 @@ export const useTwitchRedemptions = (
 ) => {
   useEffect(() => {
     if (!token || !user_id) return;
+    console.log(functions);
 
     const ws = new WebSocket("wss://eventsub.wss.twitch.tv/ws");
 
